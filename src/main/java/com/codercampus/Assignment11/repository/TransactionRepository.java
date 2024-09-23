@@ -50,9 +50,9 @@ public class TransactionRepository {
     }
 
 
-    public Transaction findById(Integer transactionId) {
+    public Transaction findById(Long transactionId) {
         return transactions.stream()
-                .filter(transaction -> transaction.getId().equals(Long.valueOf(transactionId)))
+                .filter(transaction -> transaction.getId().equals(transactionId))
                 .findFirst()
                 .orElse(null);
     }

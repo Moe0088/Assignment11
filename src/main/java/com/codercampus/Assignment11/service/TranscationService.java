@@ -22,7 +22,8 @@ public class TranscationService {
                 .collect(Collectors.toList());
     }
 
-    public Transaction getTransactionById(Integer transactionId) {
+    public Transaction getTransactionById(Long transactionId) {
+
         return transactionRepo.findById(transactionId);
     }
 

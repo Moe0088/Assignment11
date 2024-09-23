@@ -30,7 +30,7 @@ public class TransactionController {
     }
 
     @GetMapping("/transactions/{transactionId}")
-    public String getTransactionById(@PathVariable Integer transactionId, ModelMap model) {
+    public String getTransactionById(@PathVariable Long transactionId, ModelMap model) {
 
         Transaction transaction = transcationService.getTransactionById(transactionId);
         model.put("transactions", transaction);
