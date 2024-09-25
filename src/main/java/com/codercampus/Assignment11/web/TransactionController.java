@@ -33,8 +33,9 @@ public class TransactionController {
     public String getTransactionById(@PathVariable Long transactionId, ModelMap model) {
 
         Transaction transaction = transcationService.getTransactionById(transactionId);
-        model.put("transactions", transaction);
-        return "transactions";
+        model.put("transaction", transaction);
+
+        return "transactionDetails";
 
     }
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TransactionDetails</title>
+</head>
+<body>
+<div>
+    <span th:text="'Transaction ID: ' + ${transaction.id}+'(' + (transaction.type == 'D' ? 'Debit' : ' Credit' ) +')'"
+          style="font-weight:bolder;"></span>
+
+
+</div>
+<br>
+<div>
+    <label>Date : </label>
+    <span th:text="${transaction.date}"></span>
+</div>
+
+<div>
+    <label>Amount :</label>
+    <span th:text="${transaction.amount}"></span>
+</div>
+
+<div>
+    <label>Description : </label>
+    <span th:text="${transaction.description}"></span>
+</div>
+
+<a th:href="@{/transactions}">Back</a>
+</body>
+</html>
