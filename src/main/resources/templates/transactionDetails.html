@@ -6,8 +6,9 @@
 </head>
 <body>
 <div>
-    <span th:text="'Transaction ID: ' + ${transaction.id}+'(' + (transaction.type == 'D' ? 'Debit' : ' Credit' ) +')'"
-          style="font-weight:bolder;"></span>
+    <span th:text="'Transaction ID: ' + ${transaction.id}" style="font-weight:bolder;"></span>
+    <span th:if="${transaction.type == 'D'}">(Debit)</span>
+    <span th:unless="${transaction.type =='D'}">(Credit)</span>
 
 
 </div>
